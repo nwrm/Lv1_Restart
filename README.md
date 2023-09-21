@@ -34,3 +34,55 @@
     setTitle(""); // 제목 입력창 비우기
     setContent(""); // 내용 입력창 비우기
   };
+```
+
+완료버튼 개선
+
+1. 완료를 누르면 Done 으로 넘어감 -> Done에서는 완료가 취소 버튼으로 텍스트가 바뀜
+
+```js
+//완료 버튼 변경전
+import React from "react";
+
+const Todo = ({
+  item,
+  clickRemoverButtonHandler,
+  clickUpdateButtonHandler,
+}) => {
+  return (
+    <div key={item.id} className="component-style">
+      <h4>{item.title}</h4>
+      <p>{item.content}</p>
+      <button onClick={clickRemoverButtonHandler}>X</button>
+      <button onClick={clickUpdateButtonHandler}>
+        {item.isDone ? "취소" : "완료"}
+      </button>
+    </div>
+  );
+};
+
+export default Todo;
+
+
+//완료 버튼 변경후
+import React from "react";
+
+const Todo = ({
+  item,
+  clickRemoverButtonHandler,
+  clickUpdateButtonHandler,
+}) => {
+  return (
+    <div key={item.id} className="component-style">
+      <h4>{item.title}</h4>
+      <p>{item.content}</p>
+      <button onClick={clickRemoverButtonHandler}>X</button>
+      <button onClick={clickUpdateButtonHandler}>
+        {item.isDone ? "취소" : "완료"}  // if로 변경시 -> let buttonText; if (item.isDone) {buttonText = "취소";} else {buttonText = "완료";}
+      </button>
+    </div>
+  );
+};
+
+export default Todo;
+```
