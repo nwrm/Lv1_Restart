@@ -1,16 +1,10 @@
 //child component - Todo.jsx
 
-const Todo = ({
-  item,
-  clickRemoverButtonHandler,
-  clickUpdateButtonHandler,
-}) => {
+const Todo = ({ item, clickRemoverButtonHandler }) => {
   return (
-    <div key={item.id} className="component-style">
-      <h4>{item.title}</h4>
-      <p>{item.content}</p>
+    <div key={item.id} classname="component-style">
+      {item.title} - {item.content}
       <button onClick={clickRemoverButtonHandler}>X</button>
-      <button onClick={clickUpdateButtonHandler}>완료</button>
     </div>
   );
 };
