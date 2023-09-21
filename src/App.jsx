@@ -79,10 +79,10 @@ export default function App() {
 
       <div className="input">
         제목 &nbsp;
-        <input value={title} onChange={titleChangeHandler} />
+        <input value={title} type="text" onChange={titleChangeHandler} />
         {title}
         내용 &nbsp;
-        <input value={content} onChange={contentChangeHandler} />
+        <input value={content} type="text" onChange={contentChangeHandler} />
         {content}
         <button onClick={clickAddButtonHandler}>추가</button>
       </div>
