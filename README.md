@@ -3,7 +3,7 @@
 1. 공백시 제출버튼 작동이 안됨
 2. 제출 후 입력창이 비워짐
 
-
+```js
  //추가하기 버튼 변경 전
   const clickAddButtonHandler = () => {
     const newTodo = {
