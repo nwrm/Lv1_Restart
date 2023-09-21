@@ -55,7 +55,6 @@ const Todo = ({
       <p>{item.content}</p>
       <button onClick={clickRemoverButtonHandler}>X</button>
       <button onClick={clickUpdateButtonHandler}>
-        {item.isDone ? "취소" : "완료"}
       </button>
     </div>
   );
