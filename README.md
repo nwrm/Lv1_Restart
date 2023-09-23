@@ -14,9 +14,10 @@
     };
       setTodos([...todos, newTodo]);
   };
+```
 
 
-
+```js
  //추가하기 버튼 변경후
   const clickAddButtonHandler = () => {
     // 입력값이 둘 중 하나라도 공백이면 아무것도 하지 않음
@@ -61,8 +62,9 @@ const Todo = ({
 };
 
 export default Todo;
+```
 
-
+```js
 //완료 버튼 변경후
 import React from "react";
 
